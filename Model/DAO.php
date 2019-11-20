@@ -7,6 +7,7 @@ $server = "localhost";
 $user = "root";
 $pass = "";
 
+$dao = new DAO($database_name,$server,$user,$pass);
 
 class DAO{
     private $pdo;
@@ -36,7 +37,7 @@ class DAO{
                 return new Secteur();
             }
         }else{
-            return new Secteur();//on renvoie un nouveaux objet utilisateur vide si la recherche dans la base de donnée à échouer
+            return new Secteur();//on renvoie un nouveaux objet secteur vide si la recherche dans la base de donnée à échouer
         }
     }
 
