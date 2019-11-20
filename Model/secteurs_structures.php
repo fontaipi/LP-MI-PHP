@@ -67,6 +67,6 @@ class secteurs_structures{
         $this->id_secteur = $id_secteur;
     }
 
-    
+
 
 }
