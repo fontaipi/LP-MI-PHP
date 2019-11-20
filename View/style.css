@@ -1,6 +1,6 @@
 .menu {
   height: 100%;
-  width: 220px;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -23,5 +23,33 @@
 .content {
   padding: 0 2rem;
   margin-left: 220px; }
+
+li ul {
+  display: none; }
+
+li:hover > ul {
+  display: block; }
+
+li:hover li {
+  float: none; }
+
+li:hover a {
+  background: #5dade2; }
+
+li:hover li a:hover {
+  background: #aed6f1; }
+
+.menu li ul li {
+  border-top: 0; }
+
+ul:before,
+ul:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+ul:after {
+  clear: both; }
 
 /*# sourceMappingURL=style.css.map */
