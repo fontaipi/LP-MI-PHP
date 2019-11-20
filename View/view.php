@@ -22,36 +22,50 @@
         </ul>
     </nav>
 </div>
-    <div class="content">
-        <form method="post" action="">
-            <p>Créer un secteur</p>
-            <input type="text">
-            <br>
-            <input type="submit">
-        </form>
+    <div class="moove-right">
+        <div class="content">
+            <form method="post" action="">
+                <h2>Créer un secteur</h2>
+                <div class="champ">
+                    <label for="libelle">Nom du secteur : </label>
+                    <input id="libelle" type="text">
+                </div>
+                <input type="submit">
 
-        <form method="post" action="">
-            <p>Créer une entreprise</p>
-            <label for="libelle">Nom de l'entrprise : </label>
-            <input id="libelle" type="text">
-            <br>
-            <label for="rue">Rue : </label>
-            <input id="rue" type="text">
-            <br>
-            <label for="ville">Ville : </label>
-            <input id="ville" type="text">
-            <br>
-            <label for="cpostal">Code postal : </label>
-            <input id="cpostal" type="text">
-            <br>
-            <label id="isAsso" >Association ? : </label>
-            <input id="isAsso" type="checkbox">
-            <br>
-            <label for="nbMembre">Nombre de </label>
-            <input  id="nbMembre" type="number">
-            <br>
-            <input type="submit">
-        </form>
+            </form>
+
+            <form method="post" action="">
+                <h2>Créer une entreprise</h2>
+                <div class="champ">
+                    <label for="libelle">Nom de l'entrprise : </label>
+                    <input id="libelle" type="text">
+                </div>
+
+                <div class="champ">
+                    <label for="rue">Rue : </label>
+                    <input id="rue" type="text">
+                </div>
+                <div class="champ">
+                    <label for="ville">Ville : </label>
+                    <input id="ville" type="text">
+                </div>
+                <div class="champ">
+                    <label for="cpostal">Code postal : </label>
+                    <input id="cpostal" type="text">
+                </div>
+                <div class="champ">
+                    <label id="isAsso" >Association ? : </label>
+                    <input id="isAsso" type="checkbox">
+                </div>
+                <div class="champ">
+                    <label for="nbMembre">Nombre de </label>
+                    <input  id="nbMembre" type="number">
+                </div>
+
+                <input type="submit">
+            </form>
+        </div>
+
     </div>
 </body>
 </html>

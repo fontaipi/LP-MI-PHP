@@ -26,25 +26,50 @@
     }
   }
 }
-
+.moove-right {
+  margin-left: 250px;
+}
 .content {
   padding: 0 2rem;
-  margin-left: 220px;
+  margin: 0 auto;
+  max-width: 1070px;
 }
 
 li ul { display: none; }
-
 li:hover > ul {
   display: block;
 }
-li:hover li { float: none; }
 li:hover a { background: #5dade2; }
 li:hover li a:hover { background:  #aed6f1 ; }
-.menu li ul li { border-top: 0; }
 
-ul:before,
-ul:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
+form {
+  max-width: 800px !important;
+  margin: 0 auto;
+  border:1px solid gray;
+  border-radius: 3px;
+  padding: 20px;
 }
-ul:after { clear: both; }
+
+.champ {
+  height: 45px;
+  margin-bottom: 15px;
+}
+input[type="url"], input[type="date"], input[type="file"], input[type="text"], input[type="email"], input[type="number"], input[type="search"],  input[type="password"],  textarea, select {
+  width: 30%;
+  height: 45px;
+  padding: 0.5rem 1rem;
+  background-color:
+          #f2f6f8;
+  appearance: none;
+  border: 1px solid
+  #cedde5;
+  border-radius: 3px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  clear: both;
+  float: right;
+
+  &:focus {
+    border: 1px solid #1a5276;
+  }
+}
