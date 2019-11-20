@@ -5,49 +5,16 @@ class secteur{
     private $id;
     private $libelle;
 
-    /**
-     * secteur constructor.
-     * @param $id
-     * @param $libelle
-     */
-    public function __construct($id, $libelle)
-    {
-        $this->id = $id;
-        $this->libelle = $libelle;
+    public function __construct(array $tab = NULL){//nécessaire pour les test unitaire
+        if($tab != NULL){
+            foreach ($tab as $key => $value) {
+                $this->$key = $value;
+            }
+        }
     }
-
-
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
+    function __get(string $property){
+        return $this->$property;
     }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLibelle()
-    {
-        return $this->libelle;
-    }
-
-    /**
-     * @param mixed $libelle
-     */
-    public function setLibelle($libelle)
-    {
-        $this->libelle = $libelle;
-    }
-
-
 }
+
+
