@@ -75,6 +75,10 @@ class DAO{
         }
     }
 
+    function updateSecteur($id,$libelle){
+        $req = "UPDATE secteur SET libelle = $libelle WHERE id=$id";
+    }
+
     function getStructureById($id) : Structure{
         $req = "SELECT * FROM structure WHERE id = '$id'";//sélectonne un secteur correspond à l'identification id rentrer en paramètre
         $lignereq =($this->pdo)->query($req);
@@ -128,5 +132,16 @@ class DAO{
         }
     }
 
-    
+    function updateStructure($id,$nom,$rue,$cp,$ville,$estasso,$nb){
+        if($estasso == 1){
+            $req = "UPDATE structure SET nom = $nom , rue= $rue,cp= $cp, ville= $ville , estasso = $estasso , nb_donnateurs = $nb WHERE id =$id ";
+        }
+        else{
+            $req = "UPDATE structure SET nom = $nom , rue= $rue,cp= $cp, ville= $ville , estasso = $estasso , nb_actionnaires = $nb WHERE id =$id ";
+        }
+
+        ($this->db)->exec($req);;
+    }
+
+
 }
