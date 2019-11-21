@@ -4480,6 +4480,15 @@ li:hover li a:hover {
     float: right; }
     .classic-form input[type="url"]:focus, .classic-form input[type="date"]:focus, .classic-form input[type="file"]:focus, .classic-form input[type="text"]:focus, .classic-form input[type="email"]:focus, .classic-form input[type="number"]:focus, .classic-form input[type="search"]:focus, .classic-form input[type="password"]:focus, .classic-form textarea:focus, .classic-form select:focus {
       border: 1px solid #1a5276; }
+  .classic-form input[type="submit"] {
+    border-radius: 5px;
+    background-color: #1a5276;
+    border: solid 2px #1a5276;
+    color: #ffffff;
+    padding: 10px; }
+    .classic-form input[type="submit"]:hover {
+      background-color: #ffffff;
+      color: #1a5276; }
 
 .listItem {
   display: flex;
@@ -4487,16 +4496,16 @@ li:hover li a:hover {
   padding: 0; }
   .listItem .item {
     position: relative;
-    flex: 0 0 30%;
+    flex: 0 0 47%;
     border: solid 2px #1a5276;
     border-radius: 5px;
     padding: 10px;
     list-style: none;
     margin: 0 0 1% 1%; }
-    .listItem .item:nth-child(3n+1) {
+    .listItem .item:nth-child(2n+1) {
       margin-left: 0; }
     .listItem .item .nom {
-      margin-bottom: 10px; }
+      margin-bottom: 60px; }
       .listItem .item .nom:before {
         content: ""; }
     .listItem .item .type {

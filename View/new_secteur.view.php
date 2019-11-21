@@ -12,7 +12,7 @@
 <div class="menu">
     <nav>
         <ul>
-            <li><a href="#">Créer</a>
+            <li><a class="current" href="#">Créer</a>
                 <ul>
                     <li><a href="new_secteur.view.php">Créer un secteur</a></li>
                     <li><a href="new_structure.view.php">Créer une structure</a></li>

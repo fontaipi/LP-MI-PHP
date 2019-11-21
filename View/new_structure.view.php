@@ -12,7 +12,7 @@
 <div class="menu">
     <nav>
         <ul>
-            <li><a href="#">Créer</a>
+            <li><a class="current" href="#">Créer</a>
                 <ul>
                     <li><a href="new_secteur.view.php">Créer un secteur</a></li>
                     <li><a href="new_structure.view.php">Créer une structure</a></li>
@@ -25,7 +25,7 @@
 <div class="moove-right">
     <div class="content">
         <form class="classic-form" method="post" action="">
-            <h2>Créer une entreprise</h2>
+            <h2>Créer une structure</h2>
             <div class="champ">
                 <label for="libelle">Nom de l'entrprise : </label>
                 <input id="libelle" type="text">
