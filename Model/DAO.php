@@ -31,7 +31,7 @@ class DAO{
         $req = "SELECT * FROM secteur" ;
         $std = ($this->pdo)->query($req);
         $res = $std->fetchAll(PDO::FETCH_CLASS,"Secteur");
-        
+
         if(count($res)>0){
             return $res;
 
@@ -64,12 +64,15 @@ class DAO{
         ($this->pdo)->exec($req);
     }
 
-    function deleteSecteur(int $id) {
-        // supprimerPage de numéro $numero
-        // ET décaler toutes les autres pages de -1 !
-        $req = "DELETE FROM secteur WHERE id=$id";
-         ($this->pdo)->exec($req);
-
+    function deleteSecteur(int $id) : string {
+        try{
+            $req = "DELETE FROM secteur WHERE id=$id";
+            ($this->pdo)->exec($req);
+            return "Supression bien effectuer";
+        }
+        catch (PDOException $exception){
+               return "Code error : " + $exception->getMessage();
+        }
     }
 
     function getStructureById($id) : Structure{
@@ -113,4 +116,17 @@ class DAO{
 
         ($this->db)->exec($req);;
     }
+
+    function deleteStructure(int $id) : string {
+        try{
+            $req = "DELETE FROM structure WHERE id=$id";
+            ($this->pdo)->exec($req);
+            return "Supression bien effectuer";
+        }
+        catch (PDOException $exception){
+            return "Code error : " + $exception->getMessage();
+        }
+    }
+
+    
 }
