@@ -1,14 +1,14 @@
 <?php
 
     class structure{
-        private $id;
-        private $nom;
-        private $rue;
-        private $cp;
-        private $ville;
-        private $estasso;
-        private $nb_donateurs;
-        private $nb_actionnaires;
+        private $ID;
+        private $NOM;
+        private $RUE;
+        private $CP;
+        private $VILLE;
+        private $ESTASSO;
+        private $NB_DONATEURS;
+        private $NB_ACTIONNAIRES;
 
         public function __construct(array $tab = NULL){//nécessaire pour les test unitaire
             if($tab != NULL){

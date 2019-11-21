@@ -2,8 +2,8 @@
 
 class secteur{
 
-    private $id;
-    private $libelle;
+    private $ID;
+    private $LIBELLE;
 
     public function __construct(array $tab = NULL){//nécessaire pour les test unitaire
         if($tab != NULL){

@@ -2,9 +2,9 @@
 
 class secteurs_structures{
 
-    private $id;
-    private $id_structure;
-    private $id_secteur;
+    private $ID;
+    private $ID_STRUCTURE;
+    private $ID_SECTEUR;
 
     public function __construct(array $tab = NULL){//nécessaire pour les test unitaire
         if($tab != NULL){
