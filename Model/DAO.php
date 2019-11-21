@@ -66,6 +66,8 @@ class DAO{
 
     function deleteSecteur(int $id) : string {
         try{
+            $req1 = "DELETE FROM secteurs_structures WHERE id_secteur = $id";
+            ($this->pdo)->exec($req1);
             $req = "DELETE FROM secteur WHERE id=$id";
             ($this->pdo)->exec($req);
             return "Supression bien effectuer";
@@ -123,6 +125,8 @@ class DAO{
 
     function deleteStructure(int $id) : string {
         try{
+            $req1 = "DELETE FROM secteurs_structures WHERE id_structure = $id";
+            ($this->pdo)->exec($req1);
             $req = "DELETE FROM structure WHERE id=$id";
             ($this->pdo)->exec($req);
             return "Supression bien effectuer";
@@ -160,7 +164,7 @@ class DAO{
         }
     }
 
-    function getSecteursStructure() : array {
+    function getSecteursStructures() : array {
         $req = "SELECT * FROM secteurs_structures" ;
         $std = ($this->pdo)->query($req);
         $res = $std->fetchAll(PDO::FETCH_CLASS,"Secteurs_structures");
@@ -173,5 +177,22 @@ class DAO{
             return array();
         }
     }
+
+    function insertSecteursStrutures($id_structure,$id_secteurs){
+        $req = "INSERT INTO secteurs_structures(id_structure,id_secteurs) VALUES ('$id_structure','$id_secteurs')";
+        ($this->pdo)->exec($req);
+    }
+
+    function deleteSecteursStrutures($id){
+        try{
+            $req = "DELETE FROM structure WHERE id=$id";
+            ($this->pdo)->exec($req);
+            return "Supression bien effectuer";
+        }
+        catch (PDOException $exception){
+            return "Code error : " + $exception->getMessage();
+        }
+    }
+
 
 }
