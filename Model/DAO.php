@@ -59,10 +59,9 @@ class DAO{
         }
     }
     
-    function insertSecteur( string $libelle) : int{
+    function insertSecteur( string $libelle){
         $req = "INSERT INTO secteur(libelle) VALUES ('$libelle')";
-        $lignereq =($this->pdo)->exec($req);;
-        return $lignereq;
+        ($this->pdo)->exec($req);
     }
 
     function deleteSecteur(int $id) {
@@ -73,4 +72,42 @@ class DAO{
 
     }
 
+    function getStructureById($id) : Structure{
+        $req = "SELECT * FROM structure WHERE id = '$id'";//sélectonne un secteur correspond à l'identification id rentrer en paramètre
+        $lignereq =($this->pdo)->query($req);
+        if($lignereq){
+            $result =$lignereq->fetchAll(PDO::FETCH_CLASS,'Structure');
+            var_dump($result);
+            if(count($result)>0){
+                return $result[0];
+            }
+            else{
+                return new Structure();
+            }
+        }else{
+            return new Structure();//on renvoie un nouveaux objet secteur vide si la recherche dans la base de donnée à échouer
+        }
+    }
+
+    function getStructures() : array{
+        $req = "SELECT * FROM structure" ;
+        $std = ($this->pdo)->query($req);
+        $res = $std->fetchAll(PDO::FETCH_CLASS,"Structure");
+        var_dump($res);
+        if(count($res)>0){
+            return $res;
+
+        }
+        else{
+            return array();
+        }
+    }
+
+    function insertStructure($nom,$rue,$cp,$ville,$estasso,$nb){
+        if($estasso == 1){
+            $req = "INSERT INTO Structure(id,nom,rue,cp,ville,estasso,) VALUES ('$id','$mdp','$mail')";
+        }
+
+        $lignereq =($this->db)->exec($req);;
+    }
 }
