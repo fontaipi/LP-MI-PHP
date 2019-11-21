@@ -105,9 +105,12 @@ class DAO{
 
     function insertStructure($nom,$rue,$cp,$ville,$estasso,$nb){
         if($estasso == 1){
-            $req = "INSERT INTO Structure(id,nom,rue,cp,ville,estasso,) VALUES ('$id','$mdp','$mail')";
+            $req = "INSERT INTO Structure(id,nom,rue,cp,ville,estasso,nb_donnateurs) VALUES ('$nom','$rue','$cp','$ville','$estasso','$nb')";
+        }
+        else{
+            $req = "INSERT INTO Structure(id,nom,rue,cp,ville,estasso,nb_actionnaires) VALUES ('$nom','$rue','$cp','$ville','$estasso','$nb')";
         }
 
-        $lignereq =($this->db)->exec($req);;
+        ($this->db)->exec($req);;
     }
 }
