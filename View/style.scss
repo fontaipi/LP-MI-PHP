@@ -48,34 +48,118 @@ li:hover > ul {
 li:hover a { background: #5dade2; }
 li:hover li a:hover { background:  #aed6f1 ; }
 
-form {
+.champ {
+  height: 45px;
+  margin-bottom: 15px;
+}
+.classic-form {
   max-width: 800px !important;
   margin: 0 auto;
   border:1px solid gray;
   border-radius: 3px;
   padding: 20px;
+  input[type="url"], input[type="date"], input[type="file"], input[type="text"], input[type="email"], input[type="number"], input[type="search"],  input[type="password"],  textarea, select {
+    width: 30%;
+    height: 45px;
+    padding: 0.5rem 1rem;
+    background-color:
+            #f2f6f8;
+    appearance: none;
+    border: 1px solid
+    #cedde5;
+    border-radius: 3px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    clear: both;
+    float: right;
+
+    &:focus {
+      border: 1px solid #1a5276;
+    }
+  }
 }
 
-.champ {
-  height: 45px;
-  margin-bottom: 15px;
-}
-input[type="url"], input[type="date"], input[type="file"], input[type="text"], input[type="email"], input[type="number"], input[type="search"],  input[type="password"],  textarea, select {
-  width: 30%;
-  height: 45px;
-  padding: 0.5rem 1rem;
-  background-color:
-          #f2f6f8;
-  appearance: none;
-  border: 1px solid
-  #cedde5;
-  border-radius: 3px;
-  box-sizing: border-box;
-  vertical-align: middle;
-  clear: both;
-  float: right;
 
-  &:focus {
-    border: 1px solid #1a5276;
+//Listes
+.listItem {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  @extend %fa-icon;
+  @extend .fas;
+  .item {
+    position: relative;
+    flex: 0 0 30%;
+    border: solid 2px #1a5276;
+    border-radius: 5px;
+    padding: 10px;
+    list-style: none;
+    margin: 0 0 1% 1%;
+
+    &:nth-child(3n+1) {
+      margin-left: 0;
+    }
+    .nom {
+      margin-bottom: 10px;
+      &:before {
+        content: fa-content($fa-var-user);
+      }
+    }
+
+    .type {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #5dade2;
+      border-top-right-radius: 3px;
+      border-left: solid 2px #1a5276;
+      border-bottom: solid 2px #1a5276;
+      border-bottom-left-radius: 5px;
+      padding: 4px;
+    }
+
+    .adresse:before {
+      content: fa-content($fa-var-home);
+    }
+
+    .admin {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 5px;
+      &:before {
+        content: fa-content($fa-var-edit);
+      }
+      &:after {
+        content: fa-content($fa-var-times);
+      }
+    }
+  }
+}
+
+.search {
+  margin-top: 30px;
+  form {
+    input[type="text"] {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      padding: 5px;
+      width: 30%;
+      border: solid 2px  #000000;
+    }
+
+    input[type="submit"] {
+      background-color: #1a5276;
+      color: #ffffff;
+      border-collapse: collapse;
+      padding: 5px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border: solid 2px  #000000;
+      border-left: none;
+      &:hover {
+        background-color: #aed6f1;
+      }
+    }
   }
 }

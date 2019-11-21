@@ -14,27 +14,25 @@
         <ul>
             <li><a href="#">Créer</a>
                 <ul>
-                    <li><a href="#">Créer un secteur</a></li>
-                    <li><a href="#">Créer une entreprise</a></li>
+                    <li><a href="new_secteur.view.php">Créer un secteur</a></li>
+                    <li><a href="new_structure.view.php">Créer une structure</a></li>
                 </ul>
             </li>
-            <li> <a href="search.php" class="current">Rechercher</a></li>
+            <li> <a href="search.view.php">Rechercher</a></li>
         </ul>
     </nav>
 </div>
 <div class="moove-right">
     <div class="content">
-        <?php
-        include_once '../Model/DAO.php';
-        include_once '../Model/secteur.php';
+        <form class="classic-form" method="post" action="">
+            <h2>Créer un secteur</h2>
+            <div class="champ">
+                <label for="libelle">Nom du secteur : </label>
+                <input id="libelle" type="text">
+            </div>
+            <input type="submit">
 
-        $db = new DAO();
-        $list = $db->getSecteurs();
-        foreach ($list as $elem) {
-            echo $elem->getLibelle();
-        }
-
-        ?>
+        </form>
     </div>
 
 </div>
