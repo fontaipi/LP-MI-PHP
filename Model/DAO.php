@@ -164,6 +164,23 @@ class DAO{
         }
     }
 
+    function getSecteursStructuresByStructureID($id) : Secteurs_structures{
+        $req = "SELECT * FROM secteurs_structures WHERE id_structure = '$id'";
+        $lignereq =($this->pdo)->query($req);
+        if($lignereq){
+            $result =$lignereq->fetchAll(PDO::FETCH_CLASS,'Secteurs_structures');
+
+            if(count($result)>0){
+                return $result[0];
+            }
+            else{
+                return new Secteurs_structures();
+            }
+        }else{
+            return new Secteurs_structures();
+        }
+    }
+
     function getSecteursStructures() : array {
         $req = "SELECT * FROM secteurs_structures" ;
         $std = ($this->pdo)->query($req);
