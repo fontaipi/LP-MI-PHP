@@ -18,7 +18,7 @@
                     <li><a href="new_structure.view.php">Créer une structure</a></li>
                 </ul>
             </li>
-            <li> <a href="search.view.php">Rechercher</a></li>
+            <li> <a class="current" href="search.view.php">Rechercher</a></li>
         </ul>
     </nav>
 </div>

@@ -77,6 +77,19 @@ li:hover li a:hover { background:  #aed6f1 ; }
       border: 1px solid #1a5276;
     }
   }
+
+  input[type="submit"] {
+    border-radius: 5px;
+    background-color: #1a5276;
+    border: solid 2px #1a5276;
+    color: #ffffff;
+    padding: 10px;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #1a5276;
+    }
+  }
 }
 
 
@@ -89,18 +102,18 @@ li:hover li a:hover { background:  #aed6f1 ; }
   @extend .fas;
   .item {
     position: relative;
-    flex: 0 0 30%;
+    flex: 0 0 47%;
     border: solid 2px #1a5276;
     border-radius: 5px;
     padding: 10px;
     list-style: none;
     margin: 0 0 1% 1%;
 
-    &:nth-child(3n+1) {
+    &:nth-child(2n+1) {
       margin-left: 0;
     }
     .nom {
-      margin-bottom: 10px;
+      margin-bottom: 60px;
       &:before {
         content: fa-content($fa-var-user);
       }
