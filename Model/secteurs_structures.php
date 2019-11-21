@@ -1,6 +1,6 @@
 <?php
 
-class secteurs_structures{
+class Secteurs_structures{
 
     private $ID;
     private $ID_STRUCTURE;

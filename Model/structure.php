@@ -1,6 +1,6 @@
 <?php
 
-    class structure{
+    class Structure{
         private $ID;
         private $NOM;
         private $RUE;

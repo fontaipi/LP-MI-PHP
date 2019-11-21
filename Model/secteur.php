@@ -1,6 +1,6 @@
 <?php
 
-class secteur{
+class Secteur{
 
     private $ID;
     private $LIBELLE;
