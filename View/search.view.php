@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../View/style.css">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -29,16 +29,9 @@
                 <input id="textSearch" type="text" placeholder="Votre recherche ?"><input id="submitSearch" type="submit">
             </form>
         </div>
-        <?php
-        include_once '../Model/DAO.php';
-        include_once '../Model/secteur.php';
-
-        $db = new DAO();
-        $listStruct = $db->getStructures();
-        ?>
             <ul class="listItem">
         <?php
-        foreach ($listStruct as $elem) { ?>
+        foreach ($listStructures as $elem) { ?>
             <li class="item">
                 <div class="nom">
                     <?php echo $elem->NOM ?>
