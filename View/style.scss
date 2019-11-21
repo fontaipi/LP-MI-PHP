@@ -1,3 +1,7 @@
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
+
 .menu {
   height: 100%;
   width: 250px;
@@ -8,6 +12,9 @@
   background-color:  #1a5276 ;
   overflow-x: hidden;
   padding-top: 20px;
+  .current {
+    background: #5dade2;
+  }
 
   ul {
     list-style: none;
@@ -22,7 +29,6 @@
 
     &:hover {
       background:  #5dade2 ;
-
     }
   }
 }

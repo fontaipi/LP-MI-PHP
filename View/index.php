@@ -18,7 +18,7 @@
                     <li><a href="#">Créer une entreprise</a></li>
                 </ul>
             </li>
-            <li> <a href="#">Rechercher</a></li>
+            <li> <a href="search.php">Rechercher</a></li>
         </ul>
     </nav>
 </div>
