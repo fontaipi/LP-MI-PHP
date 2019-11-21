@@ -31,7 +31,7 @@ class DAO{
         $req = "SELECT * FROM secteur" ;
         $std = ($this->pdo)->query($req);
         $res = $std->fetchAll(PDO::FETCH_CLASS,"Secteur");
-        var_dump($res);
+        
         if(count($res)>0){
             return $res;
 
@@ -77,7 +77,7 @@ class DAO{
         $lignereq =($this->pdo)->query($req);
         if($lignereq){
             $result =$lignereq->fetchAll(PDO::FETCH_CLASS,'Structure');
-            var_dump($result);
+
             if(count($result)>0){
                 return $result[0];
             }
@@ -93,7 +93,7 @@ class DAO{
         $req = "SELECT * FROM structure" ;
         $std = ($this->pdo)->query($req);
         $res = $std->fetchAll(PDO::FETCH_CLASS,"Structure");
-        var_dump($res);
+
         if(count($res)>0){
             return $res;
 
