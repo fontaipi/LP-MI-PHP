@@ -1,8 +1,8 @@
 <?php
-include("../Model/DAO.php");
+include_once("../Model/DAO.php");
 
 include_once ("../Model/secteur.php");
 
-$res = $dao->getSecteurs();
-echo $res[0]->LIBELLE;
+$res = $dao->deleteSecteur(2);
+echo $res;
 
