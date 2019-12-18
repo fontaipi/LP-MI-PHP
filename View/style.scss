@@ -135,18 +135,35 @@ li:hover li a:hover { background:  #aed6f1 ; }
       content: fa-content($fa-var-home);
     }
 
-    .admin {
+    .update {
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: 20px;
       padding: 5px;
+
       &:before {
         content: fa-content($fa-var-edit);
       }
-      &:after {
-        content: fa-content($fa-var-times);
-      }
+        background: none;
+        text-decoration: none;
+      
     }
+
+      .delete {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 5px;
+
+        &:before {
+          content: fa-content($fa-var-times);
+        }
+
+          background: none;
+          text-decoration: none;
+
+      }
+
   }
 }
 

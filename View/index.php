@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../View/style.css">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -12,13 +12,13 @@
 <div class="menu">
     <nav>
         <ul>
-            <li><a href="#">Créer</a>
+            <li><a class="current" href="#">Créer</a>
                 <ul>
-                    <li><a href="new_secteur.view.php">Créer un secteur</a></li>
-                    <li><a href="new_structure.view.php">Créer une structure</a></li>
+                    <li><a href="../Controler/">Créer un secteur</a></li>
+                    <li><a href="../Controler/create_structure.conrtoler.php">Créer une structure</a></li>
                 </ul>
             </li>
-            <li> <a href="search.view.php">Rechercher</a></li>
+            <li> <a href="../Controler/search.controler.php">Rechercher</a></li>
         </ul>
     </nav>
 </div>

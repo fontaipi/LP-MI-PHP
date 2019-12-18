@@ -10,15 +10,15 @@
 </head>
 <body>
 <div class="menu">
-     <nav>
+    <nav>
         <ul>
-            <li><a href="#">Créer</a>
+            <li><a class="current" href="#">Créer</a>
                 <ul>
-                    <li><a href="new_secteur.view.php">Créer un secteur</a></li>
-                    <li><a href="new_structure.view.php">Créer une structure</a></li>
+                    <li><a href="../Controler/">Créer un secteur</a></li>
+                    <li><a href="../Controler/create_structure.conrtoler.php">Créer une structure</a></li>
                 </ul>
             </li>
-            <li> <a class="current" href="search.view.php">Rechercher</a></li>
+            <li> <a href="../Controler/search.controler.php">Rechercher</a></li>
         </ul>
     </nav>
 </div>
@@ -53,9 +53,11 @@
                         echo 'Nombre d\'actionnaires : '.$elem->NB_ACTIONNAIRES;
                     } ?>
                 </div>
-                <div class="admin">
+                <a href="google.fr" class="update">
+                </a>
+                <a href="debile.fr" class="delete">
+                </a>
 
-                </div>
             </li>
         <?php  } ?>
     </div>

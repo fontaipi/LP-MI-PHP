@@ -4520,14 +4520,23 @@ li:hover li a:hover {
       padding: 4px; }
     .listItem .item .adresse:before {
       content: ""; }
-    .listItem .item .admin {
+    .listItem .item .update {
+      position: absolute;
+      bottom: 0;
+      right: 20px;
+      padding: 5px;
+      background: none;
+      text-decoration: none; }
+      .listItem .item .update:before {
+        content: ""; }
+    .listItem .item .delete {
       position: absolute;
       bottom: 0;
       right: 0;
-      padding: 5px; }
-      .listItem .item .admin:before {
-        content: ""; }
-      .listItem .item .admin:after {
+      padding: 5px;
+      background: none;
+      text-decoration: none; }
+      .listItem .item .delete:before {
         content: ""; }
 
 .search {
