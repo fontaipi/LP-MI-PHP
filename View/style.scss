@@ -209,3 +209,39 @@ li:hover li a:hover { background:  #aed6f1 ; }
   }
 
 }
+
+.error_message {
+  display: inline-block;
+  @extend .fa;
+  @extend .fas;
+
+  border: solid red;
+  padding: 10px;
+  background: lightcoral;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+
+  &:before {
+    content: fa-content($fa-var-exclamation-triangle);
+    margin-right: 3px;
+  }
+}
+
+.ok_message {
+  display: inline-block;
+  @extend .fa;
+  @extend .fas;
+
+  border: solid green;
+  padding: 10px;
+  background: lightgreen;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+
+  &:before {
+    content: fa-content($fa-var-check-circle);
+    margin-right: 3px;
+  }
+}

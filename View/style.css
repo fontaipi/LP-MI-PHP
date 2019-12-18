@@ -3,9 +3,11 @@
  * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-.fa,
+.fa, .error_message, .ok_message,
 .fas,
 .listItem,
+.error_message,
+.ok_message,
 .far,
 .fal,
 .fad,
@@ -97,16 +99,20 @@
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left,
+.fa.fa-pull-left, .fa-pull-left.error_message, .fa-pull-left.ok_message,
 .fas.fa-pull-left,
 .fa-pull-left.listItem,
+.fa-pull-left.error_message,
+.fa-pull-left.ok_message,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
   margin-right: .3em; }
-.fa.fa-pull-right,
+.fa.fa-pull-right, .fa-pull-right.error_message, .fa-pull-right.ok_message,
 .fas.fa-pull-right,
 .fa-pull-right.listItem,
+.fa-pull-right.error_message,
+.fa-pull-right.ok_message,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
@@ -4392,9 +4398,11 @@ readers do not read off random characters that represent icons */
   font-display: auto;
   src: url("../Utilities/webfonts/fa-solid-900.eot");
   src: url("../Utilities/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../Utilities/webfonts/fa-solid-900.woff2") format("woff2"), url("../Utilities/webfonts/fa-solid-900.woff") format("woff"), url("../Utilities/webfonts/fa-solid-900.ttf") format("truetype"), url("../Utilities/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
-.fa,
+.fa, .error_message, .ok_message,
 .fas,
-.listItem {
+.listItem,
+.error_message,
+.ok_message {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
@@ -4570,5 +4578,29 @@ li:hover li a:hover {
     border: solid 2px  #000000; }
     .filtres #submitFiltre:hover {
       background-color: #aed6f1; }
+
+.error_message {
+  display: inline-block;
+  border: solid red;
+  padding: 10px;
+  background: lightcoral;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px; }
+  .error_message:before {
+    content: "";
+    margin-right: 3px; }
+
+.ok_message {
+  display: inline-block;
+  border: solid green;
+  padding: 10px;
+  background: lightgreen;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px; }
+  .ok_message:before {
+    content: "";
+    margin-right: 3px; }
 
 /*# sourceMappingURL=style.css.map */
