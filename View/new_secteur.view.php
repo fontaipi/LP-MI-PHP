@@ -24,15 +24,20 @@
 </div>
 <div class="moove-right">
     <div class="content">
-        <form class="classic-form" method="post" action="">
+        <form class="classic-form" method="post" action="../Controler/create_secteurs.controler.php">
             <h2>Créer un secteur</h2>
             <div class="champ">
                 <label for="libelle">Nom du secteur : </label>
-                <input id="libelle" type="text">
+                <input  name="libelle" id="libelle" type="text">
+
             </div>
-            <input type="submit">
+            <input name="submit" value="submit" type="submit" required>
 
         </form>
+        <div id="error_message">
+            <?php echo $error_message; ?>
+
+        </div>
     </div>
 
 </div>
