@@ -120,7 +120,7 @@ class DAO{
             $req = "INSERT INTO Structure(id,nom,rue,cp,ville,estasso,nb_actionnaires) VALUES ('$nom','$rue','$cp','$ville','$estasso','$nb')";
         }
 
-        ($this->db)->exec($req);;
+        ($this->pdo)->exec($req);;
     }
 
     function deleteStructure(int $id) : string {
