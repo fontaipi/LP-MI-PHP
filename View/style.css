@@ -4547,7 +4547,7 @@ li:hover li a:hover {
     padding: 5px;
     width: 30%;
     border: solid 2px  #000000; }
-  .search form input[type="submit"] {
+  .search form #submitSearch {
     background-color: #1a5276;
     color: #ffffff;
     border-collapse: collapse;
@@ -4556,7 +4556,19 @@ li:hover li a:hover {
     border-bottom-right-radius: 20px;
     border: solid 2px  #000000;
     border-left: none; }
-    .search form input[type="submit"]:hover {
+    .search form #submitSearch:hover {
+      background-color: #aed6f1; }
+
+.filtres {
+  margin-top: 20px; }
+  .filtres #submitFiltre {
+    margin-left: 30px;
+    background-color: #1a5276;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 20px;
+    border: solid 2px  #000000; }
+    .filtres #submitFiltre:hover {
       background-color: #aed6f1; }
 
 /*# sourceMappingURL=style.css.map */

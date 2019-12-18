@@ -163,6 +163,21 @@ class DAO{
             return new Secteurs_structures();
         }
     }
+    //int $type
+    //asso = 1; entreprise = 0;
+    function getStructureByType($type) {
+        $req = "SELECT * FROM structure WHERE estasso = $type" ;
+        $std = ($this->pdo)->query($req);
+        $res = $std->fetchAll(PDO::FETCH_CLASS,"Structure");
+
+        if(count($res)>0){
+            return $res;
+
+        }
+        else{
+            return array();
+        }
+    }
 
     function getSecteursStructuresByStructureID($id) : Secteurs_structures{
         $req = "SELECT * FROM secteurs_structures WHERE id_structure = '$id'";

@@ -29,6 +29,15 @@
                 <input id="textSearch" type="text" placeholder="Votre recherche ?"><input id="submitSearch" type="submit">
             </form>
         </div>
+        <div class="filtres">
+            <form action="../Controler/search.controler.php" method="post">
+                <label for="searchEntreprise">Entreprise</label>
+                <input type="checkbox" id="searchEntreprise" name="searchEntreprise">
+                <label for="searchAsso">Association</label>
+                <input type="checkbox" id="searchAsso" name="searchAsso">
+                <input id="submitFiltre" type="submit" name="submitFiltre" value="Appliquer les filtres">
+            </form>
+        </div>
             <ul class="listItem">
         <?php
         foreach ($listStructures as $elem) { ?>

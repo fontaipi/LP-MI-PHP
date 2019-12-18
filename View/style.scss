@@ -146,7 +146,7 @@ li:hover li a:hover { background:  #aed6f1 ; }
       }
         background: none;
         text-decoration: none;
-      
+
     }
 
       .delete {
@@ -178,7 +178,7 @@ li:hover li a:hover { background:  #aed6f1 ; }
       border: solid 2px  #000000;
     }
 
-    input[type="submit"] {
+    #submitSearch {
       background-color: #1a5276;
       color: #ffffff;
       border-collapse: collapse;
@@ -192,4 +192,20 @@ li:hover li a:hover { background:  #aed6f1 ; }
       }
     }
   }
+}
+
+.filtres {
+  margin-top: 20px;
+  #submitFiltre {
+    margin-left: 30px;
+    background-color: #1a5276;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 20px;
+    border: solid 2px  #000000;
+    &:hover {
+      background-color: #aed6f1;
+    }
+  }
+
 }
