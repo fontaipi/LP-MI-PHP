@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
     if (isset($_POST['libelle'])) {
         try{
             $dao->insertSecteur($libelle);
+            $ok_message = "Votre secteur à bien été crée";
         }
         catch (PDOException $PDOException){
             $error_message = "Ce secteur existe déjà !";

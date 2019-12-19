@@ -31,11 +31,11 @@
                 <input  name="libelle" id="libelle" type="text">
 
             </div>
-            <input name="submit" value="submit" type="submit" required>
+            <input name="submit"  type="submit" required>
             <?php if (isset($error_message)) {
                 echo '<div class="error_message">'. $error_message . '</div>';
-            } else {
-                echo '<div class="ok_message">Votre secteur a bien été crée</div>';
+            } else if (isset($ok_message)) {
+                echo '<div class="ok_message">'. $ok_message .'</div>';
             }?>
         </form>
 
