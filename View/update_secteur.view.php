@@ -25,12 +25,15 @@
 </div>
 <div class="moove-right">
     <div class="content">
-        <form class="classic-form" method="post" action="../Controler/create_secteurs.controler.php">
-            <h2>Créer un secteur</h2>
+        <form class="classic-form" method="post" action="../Controler/listes_secteurs.controler.php">
+
+           <h2>Mettre à jour le secteur</h2>
 
             <div class="champ">
+                <div>ID : <?php if(isset($secteur)){echo $secteur->ID ;} ?></div>
+                <input type="text" hidden="hidden" name="idSecteur" value="<?php echo $_POST['idSecteur'];?>">
                 <label for="libelle">Nom du secteur : </label>
-                <input  name="libelle" id="libelle" type="text">
+                <input  name="libelle" id="libelle" type="text" value="<?php if(isset($secteur)){echo $secteur->LIBELLE ;} ?>">
 
             </div>
             <input name="submit"  type="submit" required>
@@ -46,4 +49,3 @@
 
 </div>
 </body>
-</html>

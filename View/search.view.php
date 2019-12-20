@@ -19,6 +19,7 @@
                 </ul>
             </li>
             <li> <a href="../Controler/search.controler.php">Rechercher</a></li>
+            <li><a href="../Controler/listes_secteurs.controler.php">Secteurs</a> </li>
         </ul>
     </nav>
 </div>
@@ -40,26 +41,29 @@
         </div>
             <ul class="listItem">
         <?php
-        foreach ($listStructures as $elem) { ?>
+        foreach ($listeAffichage as $elem) { ?>
             <li class="item">
                 <div class="nom">
-                    <?php echo $elem->NOM ?>
+                    <?php echo $elem[0]->NOM ?>
+                </div>
+                <div class="secteurs">
+                    <?php if($elem[1]->LIBELLE != null){ echo $elem[1]->LIBELLE ;}   ?>
                 </div>
                 <div class="adresse">
-                    <?php echo $elem->RUE.' '.$elem->CP.' '.$elem->VILLE ?>
+                    <?php echo $elem[0]->RUE.' '.$elem[0]->CP.' '.$elem[0]->VILLE ?>
                 </div>
                 <div class="type">
-                    <?php if ($elem->ESTASSO) {
+                    <?php if ($elem[0]->ESTASSO) {
                         echo 'Association';
                     } else {
                         echo 'Entreprise';
                     } ?>
                 </div>
                 <div class="nbOf">
-                    <?php if ($elem->ESTASSO) {
-                        echo 'Nombre de donateurs : '.$elem->NB_DONATEURS;
+                    <?php if ($elem[0]->ESTASSO) {
+                        echo 'Nombre de donateurs : '.$elem[0]->NB_DONATEURS;
                     } else {
-                        echo 'Nombre d\'actionnaires : '.$elem->NB_ACTIONNAIRES;
+                        echo 'Nombre d\'actionnaires : '.$elem[0]->NB_ACTIONNAIRES;
                     } ?>
                 </div>
                 <a href="google.fr" class="update">

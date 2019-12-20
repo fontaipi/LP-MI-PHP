@@ -47,7 +47,7 @@ class DAO{
         $lignereq =($this->pdo)->query($req);
         if($lignereq){
             $result =$lignereq->fetchAll(PDO::FETCH_CLASS,'Secteur');
-            var_dump($result);
+
             if(count($result)>0){
                 return $result[0];
             }
@@ -78,7 +78,8 @@ class DAO{
     }
 
     function updateSecteur($id,$libelle){
-        $req = "UPDATE secteur SET libelle = $libelle WHERE id=$id";
+        $req = "UPDATE secteur SET libelle = '$libelle' WHERE id= '$id'";
+        ($this->pdo)->exec($req);;
     }
 
     function getStructureById($id) : Structure{

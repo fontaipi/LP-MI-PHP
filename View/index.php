@@ -19,6 +19,7 @@
                 </ul>
             </li>
             <li> <a href="../Controler/search.controler.php">Rechercher</a></li>
+            <li><a href="../Controler/listes_secteurs.controler.php">Secteurs</a> </li>
         </ul>
     </nav>
 </div>
