@@ -18,7 +18,7 @@
                     <li><a href="../Controler/create_structure.conrtoler.php">Créer une structure</a></li>
                 </ul>
             </li>
-            <li> <a href="../Controler/liste_structures.controler.php">Rechercher</a></li>
+            <li> <a href="../Controler/liste_structures.controler.php">Structures</a></li>
             <li><a href="../Controler/liste_secteurs.controler.php">Secteurs</a> </li>
         </ul>
     </nav>
@@ -72,11 +72,11 @@
                 </div>
                 <form action="../Controler/update_structure_controler.php" method="post">
                     <input type="number" name="idStructure" hidden="hidden" value="<?php echo $elem[0]->ID ; ?>">
-                    <input class="update" type="submit" name="submitUpdate" value="Update">
+                    <input class="update" type="submit" name="submitUpdate" value="Modifier">
                 </form>
                 <form action="../Controler/liste_structures.controler.php" method="post">
                     <input type="number" name="idStructure" hidden="hidden" value="<?php echo $elem[0]->ID ; ?>">
-                    <input class="delete" type="submit" name="submitDelete" value="Delete">
+                    <input class="delete" type="submit" name="submitDelete" value="Supprimer">
                 </form>
 
             </li>

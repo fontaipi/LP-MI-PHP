@@ -18,7 +18,7 @@
                     <li><a href="../Controler/create_structure.conrtoler.php">Créer une structure</a></li>
                 </ul>
             </li>
-            <li> <a href="../Controler/liste_structures.controler.php">Rechercher</a></li>
+            <li> <a href="../Controler/liste_structures.controler.php">Structures</a></li>
             <li><a href="../Controler/liste_secteurs.controler.php">Secteurs</a> </li>
         </ul>
     </nav>
@@ -56,7 +56,7 @@
             <div class="champs">
                 <label for="secteur">Secteur</label>
                 <select name="secteurs" id="pet-select">
-                    <option value="-1">--Please choose an option--</option>
+                    <option value="-1">Choisir un secteur</option>
                     <?php foreach ($secteurs as $secteur){  ?>
                     <option value="<?php echo $secteur->ID ?>"><?php echo $secteur->LIBELLE?></option>
                     <?php }?>

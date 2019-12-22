@@ -57,7 +57,7 @@
             <div class="champs">
                 <label for="secteur">Secteur</label>
                 <select name="secteurs" id="pet-select">
-                    <option value="-1">--Please choose an option--</option>
+                    <option value="-1">Choisir un secteur</option>
 
                     <?php foreach ($secteurs as $secteur){  ?>
                         <option value="<?php echo $secteur->ID ?>" <?php if($idSecteur == $secteur->ID){echo 'selected="selected"';}?>><?php echo $secteur->LIBELLE?></option>
