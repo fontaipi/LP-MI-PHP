@@ -247,7 +247,7 @@ class DAO{
 
     function updateSecteurStructureByStructureID($idStructure,$idSecteur){
 
-            $req = "UPDATE secteurs_strctures SET id_secteur = '$idSecteur' where id_structure = '$idStructure'  ";
+            $req = "UPDATE secteurs_structures SET id_secteur = '$idSecteur' where id_structure = '$idStructure'  ";
         ($this->pdo)->exec($req);;
     }
 
