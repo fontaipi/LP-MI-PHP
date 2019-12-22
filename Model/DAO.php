@@ -157,13 +157,13 @@ class DAO{
 
     function updateStructure($id,$nom,$rue,$cp,$ville,$estasso,$nb){
         if($estasso == 1){
-            $req = "UPDATE structure SET nom = '$nom' , rue= '$rue',cp= '$cp', ville= '$ville' , estasso = '$estasso' , nb_donnateurs = '$nb' WHERE id ='$id' ";
+            $req = "UPDATE Structure SET nom = '$nom' , rue= '$rue',cp= '$cp', ville= '$ville' , estasso = '$estasso' , nb_donnateurs = '$nb' WHERE id ='$id' ";
         }
         else{
-            $req = "UPDATE structure SET nom = '$nom' , rue= '$rue',cp= '$cp', ville= '$ville' , estasso = '$estasso' , nb_actionnaires = '$nb' WHERE id ='$id' ";
+            $req = "UPDATE Structure SET nom = '$nom' , rue= '$rue',cp= '$cp', ville= '$ville' , estasso = '$estasso' , nb_actionnaires = '$nb' WHERE id ='$id' ";
         }
 
-        ($this->db)->exec($req);;
+        ($this->pdo)->exec($req);;
     }
 
     function getSecteursStructuresById($id) : Secteurs_structures{
@@ -247,8 +247,8 @@ class DAO{
 
     function updateSecteurStructureByStructureID($idStructure,$idSecteur){
 
-            $req = "UPDATE secteurs_strctures SET id_secteur = '$idSecteur'  ";
-        ($this->db)->exec($req);;
+            $req = "UPDATE secteurs_strctures SET id_secteur = '$idSecteur' where id_structure = '$idStructure'  ";
+        ($this->pdo)->exec($req);;
     }
 
 }
