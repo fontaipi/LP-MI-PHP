@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd3ecb8f-78db-404b-b412-eeda621f88a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controler/search.controler.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controler/search.controler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/listes_secteurs.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/listes_secteurs.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/new_secteur.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/new_secteur.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/new_structure.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/new_structure.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/search.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/search.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/View/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/View/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/update_secteur.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/update_secteur.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/update_structure.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/update_structure.view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577007523148</updated>
-      <workItem from="1577007529025" duration="4343000" />
+      <workItem from="1577007529025" duration="4938000" />
+      <workItem from="1577031929586" duration="429000" />
     </task>
     <servers />
   </component>
@@ -65,7 +66,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

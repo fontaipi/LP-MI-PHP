@@ -14,7 +14,7 @@
         <ul>
             <li><a class="current" href="#">Créer</a>
                 <ul>
-                    <li><a href="../Controler/">Créer un secteur</a></li>
+                    <li><a href="../Controler/create_secteurs.controler.php">Créer un secteur</a></li>
                     <li><a href="../Controler/create_structure.conrtoler.php">Créer une structure</a></li>
                 </ul>
             </li>
