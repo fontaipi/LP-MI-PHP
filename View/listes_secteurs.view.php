@@ -45,7 +45,7 @@
                     </form>
                     <form action="../Controler/listes_secteurs.controler.php" method="post">
                         <input type="number" name="idSecteur" hidden="hidden" value="<?php echo $secteur->ID ; ?>">
-                        <input class="update" type="submit" name="submitDetele" value="Delete">
+                        <input class="delete" type="submit" name="submitDelete" value="Delete">
                     </form>
 
                 </li>

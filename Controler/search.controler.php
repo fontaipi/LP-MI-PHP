@@ -38,11 +38,29 @@ if (isset($_POST['submit'])) {
     if (isset($_POST['secteurs'])){$idSecteur = (int)$_POST['secteurs'] ;}
     if (isset($_POST['libelle']) && isset($_POST['rue']) && isset($_POST['ville']) && isset($_POST['cpostal'])  && isset($_POST['nbMembre'])) {
 
-        $dao->updateStructure($id, $libelle, $rue, $cpostal, $ville, $isAsso, $nbMembre);
+        try{
+            $dao->updateStructure($id, $libelle, $rue, $cpostal, $ville, $isAsso, $nbMembre);
+            $ok_message = "Votre structure à bien mise à jour";
+        }
+        catch (PDOException $exception){
+
+            $error_message = "Erreur lors de la mise à jour !";
+        }
     }
 
     if($idSecteur != -1){
         $dao->updateSecteurStructureByStructureID($id,$idSecteur);
+    }
+}
+
+if (isset($_POST['submitDelete'])){
+    try{
+        $dao->deleteStructure(intval($_POST['idStructure']));
+        $ok_message = "Votre structure à bien été suprimmé";
+    }
+    catch (PDOException $exception){
+
+        $error_message = "Erreur lors de la supression !";
     }
 }
 

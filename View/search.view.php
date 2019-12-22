@@ -74,9 +74,9 @@
                     <input type="number" name="idStructure" hidden="hidden" value="<?php echo $elem[0]->ID ; ?>">
                     <input class="update" type="submit" name="submitUpdate" value="Update">
                 </form>
-                <form action="../Controler/update_structure_controler.php" method="post">
+                <form action="../Controler/search.controler.php" method="post">
                     <input type="number" name="idStructure" hidden="hidden" value="<?php echo $elem[0]->ID ; ?>">
-                    <input class="update" type="submit" name="submitUpdate" value="Delete">
+                    <input class="delete" type="submit" name="submitDelete" value="Delete">
                 </form>
 
             </li>
@@ -84,5 +84,14 @@
     </div>
 
 </div>
+<?php
+if(isset($error_message)){
+    echo "<script> alert( \"$error_message \" )</script>";
+}
+if(isset($ok_message)){
+    echo "<script> alert(\" $ok_message \")</script>";
+
+}
+?>
 </body>
 </html>
