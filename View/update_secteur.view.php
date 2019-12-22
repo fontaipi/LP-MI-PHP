@@ -18,14 +18,14 @@
                     <li><a href="../Controler/create_structure.conrtoler.php">Créer une structure</a></li>
                 </ul>
             </li>
-            <li> <a href="../Controler/search.controler.php">Rechercher</a></li>
-            <li><a href="../Controler/listes_secteurs.controler.php">Secteurs</a> </li>
+            <li> <a href="../Controler/liste_structures.controler.php">Rechercher</a></li>
+            <li><a href="../Controler/liste_secteurs.controler.php">Secteurs</a> </li>
         </ul>
     </nav>
 </div>
 <div class="moove-right">
     <div class="content">
-        <form class="classic-form" method="post" action="../Controler/listes_secteurs.controler.php">
+        <form class="classic-form" method="post" action="../Controler/liste_secteurs.controler.php">
 
            <h2>Mettre à jour le secteur</h2>
 

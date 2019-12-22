@@ -18,8 +18,8 @@
                     <li><a href="../Controler/create_structure.conrtoler.php">Créer une structure</a></li>
                 </ul>
             </li>
-            <li> <a href="../Controler/search.controler.php">Rechercher</a></li>
-            <li><a href="../Controler/listes_secteurs.controler.php">Secteurs</a> </li>
+            <li> <a href="../Controler/liste_structures.controler.php">Rechercher</a></li>
+            <li><a href="../Controler/liste_secteurs.controler.php">Secteurs</a> </li>
         </ul>
     </nav>
 </div>
@@ -31,7 +31,7 @@
             </form>
         </div>
         <div class="filtres">
-            <form action="../Controler/search.controler.php" method="post">
+            <form action="../Controler/liste_structures.controler.php" method="post">
                 <label for="searchEntreprise">Entreprise</label>
                 <input type="checkbox" id="searchEntreprise" name="searchEntreprise">
                 <label for="searchAsso">Association</label>
@@ -74,7 +74,7 @@
                     <input type="number" name="idStructure" hidden="hidden" value="<?php echo $elem[0]->ID ; ?>">
                     <input class="update" type="submit" name="submitUpdate" value="Update">
                 </form>
-                <form action="../Controler/search.controler.php" method="post">
+                <form action="../Controler/liste_structures.controler.php" method="post">
                     <input type="number" name="idStructure" hidden="hidden" value="<?php echo $elem[0]->ID ; ?>">
                     <input class="delete" type="submit" name="submitDelete" value="Delete">
                 </form>

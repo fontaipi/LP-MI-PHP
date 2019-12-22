@@ -18,15 +18,15 @@
                     <li><a href="../Controler/create_structure.conrtoler.php">Créer une structure</a></li>
                 </ul>
             </li>
-            <li> <a href="../Controler/search.controler.php">Rechercher</a></li>
-            <li><a href="../Controler/listes_secteurs.controler.php">Secteurs</a> </li>
+            <li> <a href="../Controler/liste_structures.controler.php">Rechercher</a></li>
+            <li><a href="../Controler/liste_secteurs.controler.php">Secteurs</a> </li>
         </ul>
     </nav>
 </div>
 <div class="moove-right">
     <div class="content">
         <h1>Modifier votre structure</h1>
-        <form class="classic-form" method="post" action="../Controler/search.controler.php">
+        <form class="classic-form" method="post" action="../Controler/liste_structures.controler.php">
             <div>ID : <?php if(isset($structure)){echo $structure->ID ;} ?></div>
             <input type="text" hidden="hidden" name="idStructure" value="<?php echo $_POST['idStructure'];?>">
             <div class="champ">

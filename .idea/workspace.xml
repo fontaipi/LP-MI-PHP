@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd3ecb8f-78db-404b-b412-eeda621f88a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controler/listes_secteurs.controler.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controler/liste_secteurs.controler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controler/search.controler.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controler/liste_structures.controler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/listes_secteurs.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/listes_secteurs.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/listes_secteurs.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/liste_secteurs.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/new_secteur.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/new_secteur.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/new_structure.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/new_structure.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/search.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/search.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/search.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/liste_structure.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/update_secteur.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/update_secteur.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/update_structure.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/update_structure.view.php" afterDir="false" />
     </list>
@@ -54,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577007523148</updated>
       <workItem from="1577007529025" duration="4938000" />
-      <workItem from="1577031929586" duration="429000" />
+      <workItem from="1577031929586" duration="683000" />
     </task>
     <servers />
   </component>

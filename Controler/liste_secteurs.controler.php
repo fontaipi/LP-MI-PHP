@@ -29,4 +29,4 @@ if (isset($_POST['submitDelete'])){
 
 $listeSecteurs = $dao->getSecteurs();
 
-include_once ("../View/listes_secteurs.view.php");
+include_once("../View/liste_secteurs.view.php");

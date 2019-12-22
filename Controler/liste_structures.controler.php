@@ -66,4 +66,4 @@ foreach ($listStructures as $structure){
     array_push($element,$secteur);
     array_push($listeAffichage,$element);
 }
-    include_once ("../View/search.view.php");
+    include_once("../View/liste_structure.view.php");
