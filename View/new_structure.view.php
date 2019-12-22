@@ -53,6 +53,16 @@
                 <input  name="nbMembre" id="nbMembre" type="number">
             </div>
 
+            <div class="champs">
+                <label for="secteur">Secteur</label>
+                <select name="secteurs" id="pet-select">
+                    <option value="-1">--Please choose an option--</option>
+                    <?php foreach ($secteurs as $secteur){  ?>
+                    <option value="<?php echo $secteur->ID ?>"><?php echo $secteur->LIBELLE?></option>
+                    <?php }?>
+                </select>
+            </div>
+
             <input name="submit" type="submit">
         </form>
     </div>

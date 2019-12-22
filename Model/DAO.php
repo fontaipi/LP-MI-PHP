@@ -99,6 +99,23 @@ class DAO{
         }
     }
 
+    function getStructureByLibelle($libelle) : Structure{
+        $req = "SELECT * FROM structure WHERE nom = '$libelle'";//sélectionne un secteur correspond à l'identification libelle rentrer en paramètre
+        $lignereq =($this->pdo)->query($req);
+        if($lignereq){
+            $result =$lignereq->fetchAll(PDO::FETCH_CLASS,'Structure');
+
+            if(count($result)>0){
+                return $result[0];
+            }
+            else{
+                return new Structure();
+            }
+        }else{
+            return new Structure();//on renvoie un nouveaux objet secteur vide si la recherche dans la base de donnée à échouer
+        }
+    }
+
     function getStructures() : array{
         $req = "SELECT * FROM structure" ;
         $std = ($this->pdo)->query($req);
@@ -122,6 +139,7 @@ class DAO{
         }
 
         ($this->pdo)->exec($req);;
+
     }
 
     function deleteStructure(int $id) : string {
@@ -212,7 +230,7 @@ class DAO{
     }
 
     function insertSecteursStrutures($id_structure,$id_secteurs){
-        $req = "INSERT INTO secteurs_structures(id_structure,id_secteurs) VALUES ('$id_structure','$id_secteurs')";
+        $req = "INSERT INTO secteurs_structures(id_structure,id_secteur) VALUES ('$id_structure','$id_secteurs')";
         ($this->pdo)->exec($req);
     }
 
