@@ -157,10 +157,10 @@ class DAO{
 
     function updateStructure($id,$nom,$rue,$cp,$ville,$estasso,$nb){
         if($estasso == 1){
-            $req = "UPDATE structure SET nom = $nom , rue= $rue,cp= $cp, ville= $ville , estasso = $estasso , nb_donnateurs = $nb WHERE id =$id ";
+            $req = "UPDATE structure SET nom = '$nom' , rue= '$rue',cp= '$cp', ville= '$ville' , estasso = '$estasso' , nb_donnateurs = '$nb' WHERE id ='$id' ";
         }
         else{
-            $req = "UPDATE structure SET nom = $nom , rue= $rue,cp= $cp, ville= $ville , estasso = $estasso , nb_actionnaires = $nb WHERE id =$id ";
+            $req = "UPDATE structure SET nom = '$nom' , rue= '$rue',cp= '$cp', ville= '$ville' , estasso = '$estasso' , nb_actionnaires = '$nb' WHERE id ='$id' ";
         }
 
         ($this->db)->exec($req);;
@@ -245,5 +245,10 @@ class DAO{
         }
     }
 
+    function updateSecteurStructureByStructureID($idStructure,$idSecteur){
+
+            $req = "UPDATE secteurs_strctures SET id_secteur = '$idSecteur'  ";
+        ($this->db)->exec($req);;
+    }
 
 }
