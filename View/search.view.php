@@ -47,7 +47,11 @@
                     <?php echo $elem[0]->NOM ?>
                 </div>
                 <div class="secteurs">
-                    <?php if($elem[1]->LIBELLE != null){ echo $elem[1]->LIBELLE ;}   ?>
+                    <?php if($elem[1]->LIBELLE != null)
+                    { echo $elem[1]->LIBELLE ;
+                    }  else {
+                        echo '<a href="new_secteur.view.php">Créer un secteur.</a>';
+                    }  ?>
                 </div>
                 <div class="adresse">
                     <?php echo $elem[0]->RUE.' '.$elem[0]->CP.' '.$elem[0]->VILLE ?>
@@ -66,10 +70,14 @@
                         echo 'Nombre d\'actionnaires : '.$elem[0]->NB_ACTIONNAIRES;
                     } ?>
                 </div>
-                <a href="google.fr" class="update">
-                </a>
-                <a href="debile.fr" class="delete">
-                </a>
+                <form action="../Controler/update_structure_controler.php" method="post">
+                    <input type="number" name="idStructure" hidden="hidden" value="<?php echo $elem[0]->ID ; ?>">
+                    <input class="update" type="submit" name="submitUpdate" value="Update">
+                </form>
+                <form action="../Controler/update_structure_controler.php" method="post">
+                    <input type="number" name="idStructure" hidden="hidden" value="<?php echo $elem[0]->ID ; ?>">
+                    <input class="update" type="submit" name="submitUpdate" value="Delete">
+                </form>
 
             </li>
         <?php  } ?>

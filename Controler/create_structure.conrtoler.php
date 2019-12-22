@@ -12,8 +12,6 @@
         if (isset($_POST['isAsso'])) {$isAsso = 1;} else {$isAsso = 0;}
         if (isset($_POST['nbMembre'])) {$nbMembre = (int)$_POST['nbMembre'];}
         if (isset($_POST['secteurs'])){$idSecteur = (int)$_POST['secteurs'] ;}
-        var_dump($_POST);
-        var_dump($idSecteur);
         if (isset($_POST['libelle']) && isset($_POST['rue']) && isset($_POST['ville']) && isset($_POST['cpostal'])  && isset($_POST['nbMembre'])) {
 
             $dao->insertStructure($libelle, $rue, $cpostal, $ville, $isAsso, $nbMembre);

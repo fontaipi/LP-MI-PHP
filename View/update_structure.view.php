@@ -26,32 +26,43 @@
 <div class="moove-right">
     <div class="content">
         <h1>Modifier votre structure</h1>
-        <form class="classic-form" method="post" action="../Controler/create_structure.conrtoler.php">
-            <h2>Créer une structure</h2>
+        <form class="classic-form" method="post" action="../Controler/search.controler.php">
+            <div>ID : <?php if(isset($structure)){echo $structure->ID ;} ?></div>
+            <input type="text" hidden="hidden" name="idStructure" value="<?php echo $_POST['idStructure'];?>">
             <div class="champ">
                 <label for="libelle">Nom de l'entrprise : </label>
-                <input name="libelle" id="libelle" type="text">
+                <input name="libelle" id="libelle" type="text" value="<?php if(isset($structure)){echo $structure->NOM ;} ?>">
             </div>
 
             <div class="champ">
                 <label for="rue">Rue : </label>
-                <input name="rue" id="rue" type="text">
+                <input name="rue" id="rue" type="text" value="<?php if(isset($structure)){echo $structure->RUE ;} ?>">
             </div>
             <div class="champ">
                 <label for="ville">Ville : </label>
-                <input name="ville" id="ville" type="text">
+                <input name="ville" id="ville" type="text" value="<?php if(isset($structure)){echo $structure->VILLE ;} ?>">
             </div>
             <div class="champ">
                 <label for="cpostal">Code postal : </label>
-                <input name="cpostal" id="cpostal" type="text">
+                <input name="cpostal" id="cpostal" type="text" value="<?php if(isset($structure)){echo $structure->CP ;} ?>">
             </div>
             <div class="champ">
                 <label id="isAsso" >Association ? : </label>
-                <input name="isAsso" id="isAsso" type="checkbox">
+                <input name="isAsso" id="isAsso" type="checkbox" <?php if(isset($structure)){if($structure->ESTASSO == 1) {echo 'checked';}} ?>>
             </div>
             <div class="champ">
                 <label for="nbMembre">Nombre de </label>
-                <input  name="nbMembre" id="nbMembre" type="number">
+                <input  name="nbMembre" id="nbMembre" type="number" value="<?php if(isset($structure)){if($structure->ESTASSO == 1) {echo $structure->NB_DONATEURS;}else {echo $structure->NB_ACTIONNAIRES;}} ?>">
+            </div>
+            <div class="champs">
+                <label for="secteur">Secteur</label>
+                <select name="secteurs" id="pet-select">
+                    <option value="-1">--Please choose an option--</option>
+
+                    <?php foreach ($secteurs as $secteur){  ?>
+                        <option value="<?php echo $secteur->ID ?>" <?php if($idSecteur == $secteur->ID){echo 'selected="selected"';}?>><?php echo $secteur->LIBELLE?></option>
+                    <?php }?>
+                </select>
             </div>
 
             <input name="submit" type="submit">
