@@ -61,7 +61,7 @@ $listeAffichage = [];
 foreach ($listStructures as $structure){
     $element = [];
     $secteurID = $dao->getSecteursStructuresByStructureID($structure->ID);
-    $secteur  = $dao->getSecteurById($secteurID->ID);
+    $secteur  = $dao->getSecteurById($secteurID->ID_SECTEUR);
     array_push($element,$structure);
     array_push($element,$secteur);
     array_push($listeAffichage,$element);
