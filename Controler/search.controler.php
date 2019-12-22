@@ -49,6 +49,7 @@ if (isset($_POST['submit'])) {
     }
 
     if($idSecteur != -1){
+
         $dao->updateSecteurStructureByStructureID($id,$idSecteur);
     }
 }
